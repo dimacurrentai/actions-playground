@@ -1,0 +1,11 @@
+name: trivial_manual
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trivial_manual:
+    runs-on: ubuntu-latest
+    steps:
+      - name: trivial
+        run: echo OK
