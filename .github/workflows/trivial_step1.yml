@@ -7,6 +7,6 @@ jobs:
   trivial_step1:
     runs-on: ubuntu-latest
     steps:
-      - name: trivial
+      - name: trivial1
         run: |
           echo "Step 1 - OK"

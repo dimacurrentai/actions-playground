@@ -1,0 +1,14 @@
+name: trivial_step2
+
+on:
+  workflow_run:
+    workflows: [trivial_step1]
+    types: [completed]
+
+jobs:
+  trivial_step2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: trivial2
+        run: |
+          echo "Step 2: OK"
