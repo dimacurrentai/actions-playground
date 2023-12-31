@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: step1 run result conclusion
         run: |
-          echo "From step 1 conclusion: ${{github.event.workflow_run.conclusion}}"
+          echo "From step 1 conclusion: ${{ github.event.workflow_run.conclusion }}"
       - name: step1 run result full
         run: |
-          echo "From step 1: ${{JSON.stringify(github.event.workflow_run, null, 2)}}"
+          echo "From step 1: ${{ github.event }}"
       - name: trivial2
         run: |
           echo "Step 2: OK"
