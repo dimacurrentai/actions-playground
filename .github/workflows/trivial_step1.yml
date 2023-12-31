@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: trivial
         run: |
-        - echo "Step 1: OK"
+          echo "Step 1 - OK"
