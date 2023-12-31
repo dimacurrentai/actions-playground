@@ -12,10 +12,11 @@ jobs:
       - name: step1 run result conclusion
         run: |
           echo "From step 1 conclusion: ${{ github.event.workflow_run.conclusion }}"
-      - name: step1 run result foo
+      - name: step1 event.workflow_run
         run: |
-          echo "Blah: ${{ github.event.workflow_run }}"
           echo "Blah: ${{ toJSON(github.event.workflow_run) }}"
+      - name: step1 event
+        run: |
           echo "Blah: ${{ toJSON(github.event) }}"
       - name: trivial2
         run: |
