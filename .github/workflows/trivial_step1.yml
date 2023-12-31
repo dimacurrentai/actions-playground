@@ -1,0 +1,12 @@
+name: trivial_step1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trivial_step1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: trivial
+        run: |
+        - echo "Step 1: OK"
