@@ -8,6 +8,9 @@ jobs:
   trivial_step1:
     runs-on: ubuntu-latest
     steps:
+      - name: set foo
+        run: |
+          echo "foo=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       - name: trivial1
         run: |
           echo "Step 1 - OK"
