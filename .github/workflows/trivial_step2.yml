@@ -15,10 +15,8 @@ jobs:
       - name: step1 run result foo
         run: |
           echo "Blah: ${{ github.event.workflow_run }}"
-          echo "Blah: ${{ github.event.workflow_run.output.foo }}"
-          echo "Blah: ${{ github.event.workflow_run.outputs.foo }}"
-          echo "Blah: ${{ github.event.workflow_run.result.foo }}"
-          echo "Blah: ${{ github.event.workflow_run.results.foo }}"
+          echo "Blah: ${{ toJSON(github.event.workflow_run) }}"
+          echo "Blah: ${{ toJSON(github.event) }}"
       - name: trivial2
         run: |
           echo "Step 2: OK"
