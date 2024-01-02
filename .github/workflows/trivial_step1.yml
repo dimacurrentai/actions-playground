@@ -14,3 +14,13 @@ jobs:
       - name: trivial1
         run: |
           echo "Step 1 - OK"
+      - name: create a multiline file
+        run: |
+          cat >test.txt <<EOF
+          one
+          two
+          three
+          EOF
+      - name: cat a multiline file
+        run: |
+          cat test.txt
